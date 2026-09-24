@@ -1,1447 +1,2070 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-<link rel="stylesheet" href="styleconpro.css">
-        <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>My CV</title>
-                    <link rel="icon" type="image/png" class="fs-3" href="./IMAGES/cv.png" />
-
-    <style>
-        body{
-            background-color:  #00264d;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>CHOEM SOKCHEA | FULL STACK WEB DEVELOPER& UI/UX Specialist</title>
+  
+  <link rel="icon" type="image/png" href="./IMAGES/cv.png" />
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              400: '#38bdf8',
+              500: '#0284c7',
+              600: '#0369a1',
+              accent: '#6366f1',
+              cyan: '#06b6d4',
+              emerald: '#10b981'
+            },
+            dark: {
+              bg: '#040711',
+              surface: '#090f1d',
+              card: 'rgba(12, 19, 36, 0.88)',
+              border: 'rgba(56, 189, 248, 0.15)'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
         }
-        footer{
-    background: linear-gradient(135deg,#0f172a,#1e3a8a);
-    color: white;
-    padding: 50px 8%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap: 30px;
-}
+      }
+    }
+  </script>
 
-footer .read{
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #38bdf8;
-    letter-spacing: 2px;
-}
-
-footer .texts{
-    color: #d1d5db;
-    line-height: 1.8;
-    font-size: 15px;
-}
-
-footer ul{
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li{
-    margin: 10px 0;
-    transition: .3s;
-    cursor: pointer;
-}
-
-footer ul li:hover{
-    color:#38bdf8;
-    transform: translateX(8px);
-}
-
-footer a{
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover{
-    color:#38bdf8;
-}
-
-
-/* Bottom Border */
-footer::after{
-    content:"© 2026 FeverChea. All Rights Reserved.";
-    grid-column:1/-1;
-    text-align:center;
-    margin-top:30px;
-    padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.2);
-    color:#cbd5e1;
-    font-size:14px;
-}
-
-/* Responsive */
-@media(max-width:768px){
-
-    footer{
-        text-align:center;
+  <style>
+    /* Ultra Fast 60FPS Scroll & Hardware Rendering */
+    html {
+      scroll-behavior: smooth;
     }
 
-    .icons{
-        justify-content:center;
+    body {
+      background-color: #040711;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      text-rendering: optimizeSpeed;
+      -webkit-font-smoothing: antialiased;
     }
 
-    footer ul li:hover{
-        transform:none;
+    /* Fast Rendering Optimization - Instant Display with Zero Delay */
+    .glass-card {
+      background: rgba(12, 20, 38, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      transform: translateZ(0);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+      will-change: transform;
+    }
+    .glass-card:hover {
+      border-color: rgba(56, 189, 248, 0.6);
+      box-shadow: 0 10px 25px -6px rgba(14, 165, 233, 0.35);
+      transform: translateY(-2px);
     }
 
-}
-    </style>
+    /* Instant Display for Images - No Scroll Wait/Fade Lag */
+    img, video {
+      display: block;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    /* Ambient Glow */
+    .glow-sphere {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.25;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* Tech badge */
+    .tech-badge {
+      background: rgba(14, 165, 233, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38bdf8;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #040711;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #38bdf8;
+    }
+
+    /* Image zoom hover */
+    .img-zoom {
+      overflow: hidden;
+    }
+    .img-zoom img {
+      transition: transform 0.25s ease-out;
+    }
+    .img-zoom:hover img {
+      transform: scale(1.04);
+    }
+
+    /* Video overlay patterns */
+    .grid-overlay {
+      background-image: radial-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    /* =======================================================
+       FUTURISTIC FLYING CYBER ROBOT / DRONE (SMOOTH PATROL)
+    ======================================================= */
+    #flyingCyberBot {
+      position: fixed;
+      z-index: 60;
+      pointer-events: auto;
+      cursor: pointer;
+      user-select: none;
+      width: 110px;
+      height: 110px;
+      left: 20px;
+      top: 120px;
+      animation: robotScreenPatrol 24s ease-in-out infinite alternate;
+      will-change: transform;
+      filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.7));
+      transition: filter 0.2s ease;
+    }
+
+    #flyingCyberBot:hover {
+      filter: drop-shadow(0 0 24px rgba(56, 189, 248, 1)) drop-shadow(0 0 35px rgba(99, 102, 241, 0.7));
+    }
+
+    @keyframes robotScreenPatrol {
+      0% {
+        transform: translate3d(0, 0, 0) rotate(-2deg);
+      }
+      25% {
+        transform: translate3d(calc(40vw), 60px, 0) rotate(4deg);
+      }
+      50% {
+        transform: translate3d(calc(75vw - 100px), 260px, 0) rotate(-3deg);
+      }
+      75% {
+        transform: translate3d(calc(30vw), 480px, 0) rotate(5deg);
+      }
+      100% {
+        transform: translate3d(calc(10vw), 220px, 0) rotate(-4deg);
+      }
+    }
+
+    .robot-body-hover {
+      animation: robotHoverVibe 2.4s ease-in-out infinite alternate;
+    }
+    @keyframes robotHoverVibe {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px) rotate(1deg); }
+      100% { transform: translateY(-16px) rotate(-1deg); }
+    }
+
+    .robot-laser {
+      animation: laserPulse 1.6s ease-in-out infinite alternate;
+      transform-origin: top center;
+    }
+    @keyframes laserPulse {
+      0% { opacity: 0.25; transform: scaleX(0.7); }
+      100% { opacity: 0.95; transform: scaleX(1.15); }
+    }
+
+    .thruster-glow {
+      animation: jetFlicker 0.35s ease-in-out infinite alternate;
+      transform-origin: center top;
+    }
+    @keyframes jetFlicker {
+      0% { opacity: 0.6; transform: scaleY(0.8); }
+      100% { opacity: 1; transform: scaleY(1.3); }
+    }
+
+    .cyber-eye {
+      animation: eyeBlink 3.6s infinite;
+      transform-origin: center;
+    }
+    @keyframes eyeBlink {
+      0%, 94%, 98%, 100% { transform: scaleY(1); }
+      96% { transform: scaleY(0.1); }
+    }
+  </style>
 </head>
-<body>
-  <div id="splash">
-  <div class="welcome-text">Welcome to my <br>CHEA-FEVER Portfolio</div>
-  <div class="welcome-sub">
-             <img src="../IMAGES/cv.png" width="30" alt="" />
- CHEA-FEVER </div>
-  <div class="splash-dots">
-    <span></span><span></span><span></span>
-  </div>
-</div>
-    <!-- nav -->
-   <nav class="navbar navbar-expand-xxl navbar-light sticky-top">
-    <div class="container pt-2 pb-2">
-      <a class="navbar-brand text-white" href="#">
-        <img src="./IMAGES/cv.png" width="30" alt="" />
-        CHEA-FEVER
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapsibleNavbar"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="collapse navbar-collapse justify-content-end"
-        id="collapsibleNavbar"
-      >
-        <ul class="navbar-nav text-uppercase">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#aboutme">ABOUT ME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#Skills">SKILL</a>
-          </li>
-          
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-white"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              PROJECTS
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#my_project">Program Projects</a></li>
-              <li><a class="dropdown-item" href="#design_projects">Design Projects</a></li>
-            </ul>
-          </li>
 
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#my_services">SERVICE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#cv">MY CV</a>
-          </li>
-        </ul>
+<body class="relative selection:bg-cyan-500 selection:text-white bg-[#040711]">
+
+  <!-- Ambient Light Orbs -->
+  <div class="glow-sphere w-96 h-96 bg-blue-600/30 top-16 left-10"></div>
+  <div class="glow-sphere w-96 h-96 bg-indigo-600/25 top-[600px] right-5"></div>
+  <div class="glow-sphere w-96 h-96 bg-cyan-600/20 top-[1800px] left-5"></div>
+
+  <!-- =======================================================
+       GLOBAL INTERACTIVE FLYING CYBER ROBOT / DRONE
+  ======================================================= -->
+  <div id="flyingCyberBot" title="Click me for a greeting!">
+    <div class="robot-body-hover relative flex flex-col items-center">
+      
+      <!-- Speech bubble popup when clicked -->
+      <div id="botSpeechBubble" class="absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-1 rounded-xl bg-slate-900/95 border border-cyan-400 text-[11px] font-mono text-cyan-300 font-semibold shadow-xl whitespace-nowrap opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+        👋 Hire Choem Sokchea now!
+        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-slate-900 border-b border-r border-cyan-400 rotate-45"></div>
+      </div>
+
+      <!-- Drone SVG Character -->
+      <svg width="95" height="95" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Antennas / Radar -->
+        <line x1="100" y1="36" x2="100" y2="14" stroke="#38bdf8" stroke-width="4.5" stroke-linecap="round" />
+        <circle cx="100" cy="11" r="5" fill="#38bdf8" class="animate-ping" />
+        <circle cx="100" cy="11" r="5" fill="#38bdf8" />
+        <circle cx="100" cy="11" r="10" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8" />
+
+        <!-- Left & Right Thruster Wings -->
+        <g>
+          <path d="M48 95 L16 82 L24 122 L52 110 Z" fill="#0b1329" stroke="#0284c7" stroke-width="2.5" />
+          <circle cx="20" cy="102" r="8" fill="#0369a1" />
+          <polygon points="15,114 20,140 25,114" fill="#06b6d4" class="thruster-glow" />
+          <polygon points="17,114 20,132 23,114" fill="#ffffff" class="thruster-glow" />
+
+          <path d="M152 95 L184 82 L176 122 L148 110 Z" fill="#0b1329" stroke="#0284c7" stroke-width="2.5" />
+          <circle cx="180" cy="102" r="8" fill="#0369a1" />
+          <polygon points="175,114 180,140 185,114" fill="#06b6d4" class="thruster-glow" />
+          <polygon points="177,114 180,132 183,114" fill="#ffffff" class="thruster-glow" />
+        </g>
+
+        <!-- Main Chassis -->
+        <rect x="52" y="36" width="96" height="84" rx="30" fill="#090f1d" stroke="#38bdf8" stroke-width="3.5" />
+        <rect x="56" y="40" width="88" height="76" rx="26" fill="#0f172a" />
+
+        <!-- Visor -->
+        <rect x="65" y="52" width="70" height="42" rx="14" fill="#020617" stroke="#0284c7" stroke-width="2" />
+        
+        <!-- Cyber Eyes -->
+        <g class="cyber-eye">
+          <ellipse cx="84" cy="73" rx="9" ry="11" fill="#38bdf8" />
+          <ellipse cx="116" cy="73" rx="9" ry="11" fill="#38bdf8" />
+          <circle cx="86" cy="70" r="3.5" fill="#ffffff" />
+          <circle cx="118" cy="70" r="3.5" fill="#ffffff" />
+        </g>
+
+        <!-- Emblem -->
+        <circle cx="100" cy="104" r="8" fill="#040711" stroke="#38bdf8" stroke-width="1.5" />
+        <text x="100" y="107.5" font-size="8" fill="#38bdf8" font-family="monospace" font-weight="bold" text-anchor="middle">&lt;/&gt;</text>
+
+        <!-- Bottom Core -->
+        <path d="M80 120 L120 120 L110 134 L90 134 Z" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+        <polygon points="90,134 100,165 110,134" fill="#38bdf8" class="thruster-glow" />
+        <polygon points="94,134 100,154 106,134" fill="#ffffff" class="thruster-glow" />
+      </svg>
+
+      <!-- Holographic Laser Beam -->
+      <div class="robot-laser w-24 h-16 bg-gradient-to-b from-cyan-400/35 via-blue-500/10 to-transparent -mt-2 pointer-events-none rounded-b-full blur-[1px]"></div>
+      
+      <!-- Status Tag -->
+      <div class="px-2 py-0.5 rounded-full bg-slate-900/90 border border-cyan-400/60 shadow-lg text-[9px] font-mono text-cyan-300 tracking-wider flex items-center gap-1.5 -mt-1 backdrop-blur-md">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+        AI.ROBOT_SYS
+      </div>
+    </div>
+  </div>
+
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#040711]/90 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="p-2 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+            <img src="./IMAGES/cv.png" width="26" height="26" alt="Chea Fever Logo" class="object-contain" />
+          </div>
+          <div>
+            <span class="text-xl font-bold tracking-tight text-white font-mono flex items-center gap-1">
+              CHOEM<span class="text-cyan-400">.SOKCHEA</span>
+            </span>
+            <span class="block text-[11px] font-mono text-cyan-400/80 -mt-1 tracking-widest uppercase">CHEA-FEVER // DEV</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+          <a href="#" class="text-slate-200 hover:text-cyan-400 transition-colors">Home</a>
+          <a href="#aboutme" class="text-slate-300 hover:text-cyan-400 transition-colors">About</a>
+          <a href="#Skills" class="text-slate-300 hover:text-cyan-400 transition-colors">Skills</a>
+          
+          <!-- Dropdown -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1.5 text-slate-300 group-hover:text-cyan-400 transition-colors">
+              <span>Projects</span>
+              <i class="bi bi-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-56 rounded-xl glass-card p-2 hidden group-hover:block shadow-2xl border border-slate-700/80">
+              <a href="#my_project" class="block px-3 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:bg-cyan-500/10 hover:text-cyan-300">
+                <i class="bi bi-code-slash mr-2"></i>Software & Web Projects
+              </a>
+              <a href="#design_projects" class="block px-3 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:bg-cyan-500/10 hover:text-cyan-300">
+                <i class="bi bi-palette mr-2"></i>UI/UX & Design Projects
+              </a>
+            </div>
+          </div>
+
+          <a href="#my_services" class="text-slate-300 hover:text-cyan-400 transition-colors">Services</a>
+          <a href="#cv" class="text-slate-300 hover:text-cyan-400 transition-colors">Resume</a>
+        </div>
+
+        <!-- HR Interview CTA -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://t.me/+855886700590" target="_blank" class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:shadow-lg hover:shadow-cyan-500/30 hover:scale-[1.02] transition-all flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            Hire Me / Interview
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" aria-label="Toggle navigation" class="lg:hidden text-slate-300 hover:text-white p-2 text-2xl focus:outline-none">
+          <i class="bi bi-list" id="menuIcon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Nav Drawer -->
+      <div id="mobileMenu" class="hidden lg:hidden pb-6 pt-2 border-t border-slate-800 space-y-2 font-medium">
+        <a href="#" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800/60">Home</a>
+        <a href="#aboutme" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800/60">About Me</a>
+        <a href="#Skills" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800/60">Skills</a>
+        <a href="#my_project" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800/60">Software Projects</a>
+        <a href="#design_projects" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800/60">Graphic & UI Designs</a>
+        <a href="#my_services" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800/60">Services</a>
+        <a href="#cv" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800/60">Curriculum Vitae</a>
+        <a href="https://t.me/+855886700590" target="_blank" class="block text-center py-2.5 rounded-xl text-white bg-cyan-600 font-semibold mt-2">
+          Schedule Interview
+        </a>
       </div>
     </div>
   </nav>
-    <!--End nav-->
-    <!--Stlye -->
-    <div class="bck">
 
-    <div class="firs">
-       
-      <div class="content" data-aos="fade-up">
-       <div class="image-section">
-    <video 
-        autoplay 
-        loop 
-        muted 
-        playsinline 
-        preload="auto" 
-        poster="../IMAGES/video-thumbnail.jpg">
-        <source src="./IMAGES/IMG_5805.mp4" type="video/mp4">
-    </video>
-</div>
-
-         </div>
-        <h1  data-aos="fade-down">
-       <span class="main">
-         CONTACT ME <br />
-          Hello My name is <br>
+  <!-- =======================================================
+       HERO SECTION (MATCHING SCREENSHOT 2 LAYOUT)
+  ======================================================= -->
+  <header class="relative w-full min-h-[90vh] flex items-center pt-28 pb-16 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Column: Typography & CTAs -->
+        <div class="lg:col-span-7 space-y-6 text-left">
           
-                  <h2 class="name">CHOEM SOKCHEA</h2> <br>
-
-                  <h2 class="text">I'M A FRONT-END DEVELOPER</h2> 
-      </span> 
-        
-        <div class="icons">
-            <a href="https://www.facebook.com/cheim.sokchai" target="_blank"
-            >
-              <img src="./IMAGES/facebook.png" alt=""> 
-        
-            </a
-          >
-          
-        <a href="https://t.me/+855886700590" target="_blank">
-          <img src="./IMAGES/telegram.png" alt="">
-           <a href="https://www.tiktok.com/@feverchea007" target="_blank">
-          <img src="./IMAGES/tiktok.png" alt="">
-            </a
-          >
-            
-        </span>
-      </h1>
- </div>
- 
- <h1 id="aboutme"></h1>
-
-       </div>
-         <h1 class="my_projects">ABOUT ME</h1>
-
-       <div class="introuction_me">
-        
-       </div>
-<div class="decribeme_me">
-  <img class="image-section2" src="./IMAGES/me.jpg" data-aos="fade-up" alt="">
-  <p class="tell" data-aos="fade-up">  My name is CHOEM SOKCHEA and my next name CHEA-FEVER. 
-      I’m a student at Asia Euro University (AEU).I am studying Information 
-      Technology. I like help others, be friendly , coordinate and take care of work and pay attention. 
-    You Can contact me by social Media below:  <br>
-
-    <span class="icons">
-            <a href="https://www.facebook.com/cheim.sokchai" target="_blank"
-            >
-              <img src="./IMAGES/facebook.png" alt=""> 
-        
-            </a
-          >
-          
-        <a href="https://t.me/+855886700590" target="_blank">
-          <img src="./IMAGES/telegram.png" alt="">
-           <a href="https://www.tiktok.com/@feverchea007" target="_blank">
-          <img src="./IMAGES/tiktok.png" alt="">
-            </a
-          >
-            
-        </span>
-  </p>
-    
-</div>
-<div class="resume-container mt-5"data-aos="fade-up">
-    
-    <div class="card">
-        <div class="card-header">
-            <div class="icon-circle edu-icon">🎓</div>
-            <h2>Education</h2>
-        </div>
-        
-        <div class="timeline-item">
-            <span class="date">2018- 2020</span>
-            <h3> Vatong Secondary</h3>
-            <p>GPA 10.00</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="date">2021 - 20123</span>
-            <h3>Sokan Tonleab High School</h3>
-            <p>Graate D</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="date">Now</span>
-            <h3>AEU University </h3>
-            <p>Information Technology</p>
-        </div>
-    </div>
-
-    <div class="card"data-aos="fade-down">
-        <div class="card-header">
-            <div class="icon-circle work-icon">💼</div>
-            <h2>Work Experience</h2>
-        </div>
-        
-        <div class="timeline-item">
-            <span class="date">2025 - 2025</span>
-            <h3> Groub Leader</h3>
-            <p>Support Team work</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="date">2024 - 2025</span>
-            <h3>Graphich Desgner</h3>
-            <p>At one Ogagnization </p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="date">2018 - 2024</span>
-            <h3></h3>
-            <p>Sell Service</p>
-        </div>
-    </div>
-
-</div>
-
-<!--End about me-->
-<!-- Skills-->
- <div class="top"></div>
- <h1 id="Skills" ></h1>
- <h1 class="Skills">Skills</h1>
- <div class="skillsicn" data-aos="fade-down">
-  <div class="icon2"> 
-    <img src="./IMAGES/174854.png" >
-    <p class="dic"> HTML Intermediate</p>
-  </div>
-   <div class="icon2"> 
-    <img src="./IMAGES/5968242.png" >
-    <p class="dic"> CSS Intermediate</p>
-  </div>
- <div class="icon2"> 
-    <img src="./IMAGES/1199124.png" >
-    <p class="dic"> JaVascript Intermediate</p>
-  </div>
-   <div class="icon2"> 
-    <img src="./IMAGES/php logo.png" >
-    <p class="dic"> PHP Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/Laravel-Logo.wine.svg" >
-    <p class="dic"> Laravel Intermediate</p>
-  </div>
- <div class="icon2"> 
-    <img src="./IMAGES/6132222.png" >
-    <p class="dic"> C++ Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/1183669.png" >
-    <p class="dic"> JAVA Intermediate</p>
-  </div>
- <div class="icon2"> 
-    <img src="./IMAGES/2772128.png" >
-    <p class="dic"> SQL  Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/PhpMyAdmin_logo.svg.webp" >
-    <p class="dic"> PhpMyAdmin Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/postmanpmg.webp" >
-    <p class="dic"> Postman  Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/git 2.png" >
-    <p class="dic"> Git  Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/Git hub.png" >
-    <p class="dic"> Git Hub  Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/10414224.png" >
-    <p class="dic">NETWORK Configuration </p>
-  </div>
-   <div class="icon2"> 
-    <img src="./IMAGES/5210800.png" >
-    <p class="dic"> PHOTOSHOP Intermediate</p>
-  </div>
- <div class="icon2"> 
-    <img src="./IMAGES/adobe-illustrator-icon-free-png.webp" >
-    <p class="dic">  illustrator  Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/16064387.png" >
-    <p class="dic">  CORLDRAW Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/Cabcap.webp" >
-    <p class="dic">  Capcut  Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/vecteezy_microsoft-word-icon-logo-symbol_27179388.png" >
-    <p class="dic">  MS Word Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/Microsoft_Excel-Logo.wine.svg" >
-    <p class="dic">  MS Excel Intermediate</p>
-  </div>
-  <div class="icon2"> 
-    <img src="./IMAGES/power pont.svg" >
-    <p class="dic">  MS Powerpoint  Intermediate</p>
-  </div>
-
-  
- </div>
- <!--End Icon1-->
-  <!--Start Icon2-->
-
- 
-  <!--End Icon2-->
-  <!--Start Icon3-->
-    <!--End Icon3-->
-   <!--My Project -->
-
- <div class="top"></div>
- <h1 id="my_project" ></h1>
-  <h1 class="my_projects"style="width: 335px;">PROGRAM PROJECTS</h1>
-    <h1 class="my_projects">Please click on the image to visit any of my website projects.</h1>
-     <!--My Projec Part1 -->
-
-  <div class="mypj">
-     
-  <div class="icon3"> 
-    <a href="https://cheafever.github.io/myfirstwebt-chea/"class="links">
-
-      <img src="./IMAGES/Electronic.png" >
-    </a>
-    <p class="dic"> HTM CSS JaVascript  PROJCECTS:
-      <ul>
-<li>Elecctron Website </li>
-      <li> Website Collection Of Elecctron Device </li>
-      <li> Click On Image Fo Visit to this website</li>
-      </ul>
-      
-
-    </p>
-  </div>
-    
-  <div class="icon3"> 
-    <a href="https://cheafever.github.io/PosSystem/"class="links">
-
-      <img src="./IMAGES/POS.jpg" >
-    </a>
-    <p class="dic"> HTM CSS JaVascript  PROJCECTS:
-      <ul>
-<li>POS system Website </li>
-      <li> Website Management Of Product</li>
-      <li> Click On Image Fo Visit to this website</li>
-      </ul>
-      
-
-    </p>
-  </div>
-   <div class="icon3"> 
-    <a href="https://cheafever.github.io/roommannagement-stem/"class="links">
-
-      <img src="./IMAGES/Room Mannagement.jpg" >
-    </a>
-    <p class="dic"> HTM CSS JaVascript  PROJCECTS:
-      <ul>
-<li>Room Management system Website </li>
-      <li> Website system Management of Room </li>
-      <li> Click On Image Fo Visit to this website</li>
-      </ul>
-      
-
-    </p>
-  </div>
-   <div class="icon3"> 
-    <a href="https://cheafever.github.io/ticket-system/"class="links">
-
-      <img src="./IMAGES/Ticekrt.jpg" >
-    </a>
-    <p class="dic"> HTM CSS JaVascript  PROJCECTS:
-      <ul>
-<li> Ticket system Website </li>
-      <li> Website Management Of Ticket </li>
-      <li> Click On Image Fo Visit to this website</li>
-      </ul>
-      
-
-    </p>
-  </div>
-  <div class="icon3"> 
-    <a href="https://cheafever.github.io/ticket-system/"class="links">
-
-      <img src="./IMAGES/Student.jpg" >
-    </a>
-    <p class="dic"> Laravel :
-      <ul>
-<li> School Management system  </li>
-      <li> system for Management all School Information </li>
-      <li> Click On Image Fo Visit to this website</li>
-      </ul>
-      
-
-    </p>
-  </div>
-  <div class="icon3"> 
-    <a href="https://lighthearted-cucurucho-a3fa41.netlify.app/"class="links">
-
-      <img src="./IMAGES/Screenshot 2026-07-02 232926.png" >
-    </a>
-    <p class="dic"> HTM CSS JaVascript Bootstrap PROJCECTS:
-      <ul>
-<li>Chea_Shop Website </li>
-      <li> Website Collection Of Clothes  </li>
-      <li> Click On Image Fo Visit to this website</li>
-      </ul>
-      
-
-    </p>
-  </div>
-   
-  <div class="icon3"> 
-    <a href="https://cheafever.github.io/Khmer-News/"class="links">
-
-      <img src="./IMAGES/news.jpg" >
-    </a>
-    <p class="dic"> HTM CSS JaVascript Bootstrap PROJCECTS:
-      <ul>
-<li>Khmer News Website </li>
-      <li> Website Collection Of Clothes  </li>
-      <li> Click On Image Fo Visit to this website</li>
-      </ul>
-      
-
-    </p>
-  </div>
-    <div class="icon3"> 
-      <a href="https://gitlab.com/chiaposall/food_delivery_back_endbest"class="links">
-
-        <img src="./IMAGES/GitLap.png" class="img2">
-      </a>
-    <p class="dic"> UPLOAD  PROJCECTS TO GITLAP:
-      <ul>
-<li>Create Database </li>
-      <li> Connect Data With Node JS </li>
-      </ul>
-      
-
-    </p>
-  </div>
-    <div class="icon3"> 
-    <img src="./IMAGES/Screenshot 2025-12-12 201303.png" >
-    <p class="dic"> JaVa PROJCECTS:
-      <ul>
-<li>Basic JaVa</li>
-      <li> Product Management</li>
-      <li> Caculator Proccess</li>
-      </ul>
-      
-
-    </p>
-  </div>
-
-  <div class="icon3"> 
-    <img src="./IMAGES/c++PRO.pngJECT.png" >
-    <p class="dic"> C++ 4 PROJCECTS:
-      <ul>
-<li>Student Management</li>
-      <li> Product Management</li>
-      <li> Caculator Proccess</li>
-      <li>Grammar Test</li>
-      </ul>
-      
-
-    </p>
-  </div>
-  <div class="icon3"> 
-    <img src="./IMAGES/COVER.jpg" >
-    <p class="dic"> Photoshop  PROJCECTS:
-      <ul>
-<li>Make a lot of Posters</li>
-      <li> Make a lot of Icons</li>
-      </ul>
-      
-
-    </p>
-  </div>
-    <div class="icon3"> 
-    <img src="./IMAGES/CorelDraw-Tools.jpg" >
-    <p class="dic"> CorelDraw  PROJCECTS:
-      <ul>
-<li>Make a lot of Posters</li>
-      <li> Make a lot of Icons</li>
-      </ul>
-      
-
-    </p>
-  </div>
-  
-  
-
-  </div>
-       <!-- End My Program Projec Part1 -->
-        <div class="top"></div>
- <h1 id="design_projects" ></h1>
-  <h1 class="my_projects" style="width: 335px;">DESIGN PROJECTS</h1>
-      <h1 class="my_projects">Please click on the image for watch Image full .</h1>
-
-
-       <!--My Projec Part2-->
-
-
-   <!--End My Projects-->
-      <!-- My Service -->
-
-  
-  <!-- Hero -->
-<!-- 
-<section id="home" class="hero">
-
-<div class="container">
-
-<h1>Creative Designer</h1>
-
-<p>
-Welcome to my portfolio. Here are all my UI/UX,
-Graphic Design and Web Design projects.
-</p>
-
-<a href="#projects" class="btn btn-primary btn-lg">
-View Projects
-</a>
-
-</div>
-
-</section> -->
-
-<!-- Projects -->
-
-<section id="projects" class="py-5">
-
-<div class="container">
-
-
-
-<div class="row g-4">
-
-<!-- Card -->
-
-<div class="col-lg-4 col-md-6 item ui">
-
-<div class="card project">
-
-<img src="IMAGES/COVER.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Hero Cover </h5>
-
-<p>Hero cover art Design.</p>
-
-</div>
-
-</div>
-
-</div>
-<!-- End Cover -->
- 
-<div class="col-lg-4 col-md-6 item ui">
-
-<div class="card project">
-
-<img src="IMAGES/Poster.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Cleaning Service Poster</h5>
-
-<p>Design For Cleaning Ser poster .</p>
-
-</div>
-
-</div>
-
-</div>
-<!-- End Poster -->
-<div class="col-lg-4 col-md-6 item ui">
-
-<div class="card project">
-
-<img src="IMAGES/Cofe Poster.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Cofe Poster</h5>
-
-<p>Design for cafe poster design.</p>
-
-</div>
-
-</div>
-
-</div>
-<!-- End Coffe -->
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/63d3a38a-d50a-45fc-8db3-50163939350c-cover.png"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>UI application plan</h5>
-
-<p>UI application Plan For Make App.</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item graphic">
-
-<div class="card project">
-
-<img src="IMAGES/Burger Menu.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Burger Menu</h5>
-
-<p>Burger Munu For Burger Food.</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item ui">
-
-<div class="card project">
-
-<img src="IMAGES/Caltex.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5> Caltex Poster </h5>
-
-<p>Creative Caltex Poster.</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item graphic">
-
-<div class="card project">
-
-<img src="IMAGES/Promotion Design.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Promotion Poster</h5>
-
-<p>Creative Promotion Poster</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Humbergure copy.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5> Burger Poster</h5>
-
-<p>Creative Burger poster .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Vacation Package.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Vacation Package </h5>
-
-<p>Explore the world poster .</p>
-
-</div>
-
-</div>
-
-</div>
-<!-- end  -->
- 
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Car Shop Poster.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Car Poster  </h5>
-
-<p>Car shop .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Travell all over the world.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5> Travell all over the world</h5>
-
-<p>Creative For Airpot Poster .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Khmer City in the Fututure.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Khmer City in the future </h5>
-
-<p>Explore the world poster .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Poster Looking For Staff Food.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Poster Looking For Staff in Food</h5>
-
-<p>For Peple Looking for Job Easy .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Poster Looking For Staff For Mart.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Poster Looking For Staff Mart</h5>
-
-<p>For Peple Looking for Job Easy .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Poster Looking For Staff Market.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Poster Looking For Staff Market</h5>
-
-<p>For Peple Looking for Job Easy .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Coffee Poster.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Coffe Poster</h5>
-
-<p>Creative Coffe poster .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Cooffe Poster.png"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Simple Coffe</h5>
-
-<p>Creative Cafe poster .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Burger Poster.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Burger Poster</h5>
-
-<p>Burger Poster Best.</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Educationlogo.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Education logo</h5>
-
-<p>Education Logo .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/SCHOOLLOGO.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>School Logo </h5>
-
-<p>School Logo .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/CafeLogo.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Cofe Logo</h5>
-
-<p>Logo Cafe .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Khmer New Year Poster.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Khmer New Year Festival</h5>
-
-<p>Creative Khmer Festival Poster .</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Pjumben Khmer Vastival.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Pjumben Khmer Festival</h5>
-
-<p>Creative Khmer Festival Poster.</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4 col-md-6 item web">
-
-<div class="card project">
-
-<img src="IMAGES/Pisak Bojea.jpg"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Pisak Bojea Festival</h5>
-
-<p>Khmer Festival Poster.</p>
-
-</div>
-
-</div>
-
-</div>
-<!-- end  -->
-
-
-</div>
-
-</div>
-
-</section>
-<!-- End Design -->
-
-<!-- Contact -->
-
-
-
-</div>
-
-     <!--My Service Part1 -->
-      <div class="top"></div>
- <h1 id="my_services" ></h1>
-  <h1 class="my_projects">MY SERVICE</h1>
-
-  <div class="mypj">
-     <div class="icon3"> 
-    <img src="./IMAGES/Webservice.jpg" >
-    <p class="dic"> Website Service :
-     
-
-    </p>
-  </div>
-  <div class="icon3"> 
-    <img src="./IMAGES/Poster.jpg" >
-    <p class="dic"> Poster Service
-    </p>
-  </div>
-    <div class="icon3"> 
-    <img src="./IMAGES/Logoservice.jpg" >
-    <p class="dic">logo Service:
-      
-    </p>
-  </div>
-  
-  </div>
-       <!-- End My Service Part1 -->
-
-       <!--My Projec Part2-->
-
- <div class="mypj">
-     <div class="icon3"> 
-    <img src="./IMAGES/Aminservice.jpg" >
-    <p class="dic"> Administration Service:
+          <!-- Status Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-card border border-emerald-500/40 text-xs font-mono text-emerald-300">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Ready for Front-End & IT Roles &bull; Immediate Hire
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1]">
+            Hi, I am <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">CHOEM SOKCHEA</span>
+          </h1>
+
+          <!-- Role Subtitle -->
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-200">
+           Junior Full Stack Web Developer & Graphic Designer Specialist
+          </h2>
+
+          <!-- Description -->
+          <p class="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-normal">
+            Passionate IT graduate from Asia Euro University (AEU). I build ultra-responsive modern web applications, scalable database-driven backends, and pixel-perfect digital designs that turn business goals into seamless software experiences.
           </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#cv" class="px-7 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all flex items-center gap-2">
+              <i class="bi bi-file-earmark-person-fill text-lg"></i>
+              Review Resume / CV
+            </a>
+            <a href="#my_project" class="px-7 py-3.5 rounded-xl font-bold text-sm glass-card border border-slate-700 text-slate-200 hover:border-cyan-400/60 hover:text-white transition-all flex items-center gap-2">
+              <i class="bi bi-terminal-fill text-cyan-400"></i>
+              Explore Projects
+            </a>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="pt-4 flex items-center gap-3">
+            <span class="text-xs uppercase tracking-widest text-slate-400 font-mono">Connect With Me:</span>
+            <div class="flex items-center gap-2.5">
+              <a href="https://www.facebook.com/cheim.sokchai" target="_blank" class="p-2.5 rounded-xl glass-card hover:bg-slate-800 transition-all hover:scale-110" title="Facebook">
+                <img src="./IMAGES/facebook.png" alt="Facebook" class="w-5 h-5 object-contain" />
+              </a>
+              <a href="https://t.me/+855886700590" target="_blank" class="p-2.5 rounded-xl glass-card hover:bg-slate-800 transition-all hover:scale-110" title="Telegram">
+                <img src="./IMAGES/telegram.png" alt="Telegram" class="w-5 h-5 object-contain" />
+              </a>
+              <a href="https://www.tiktok.com/@feverchea007" target="_blank" class="p-2.5 rounded-xl glass-card hover:bg-slate-800 transition-all hover:scale-110" title="TikTok">
+                <img src="./IMAGES/tiktok.png" alt="TikTok" class="w-5 h-5 object-contain" />
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Dedicated macOS IDE Video Preview Card (Matching Image 2) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-lg rounded-2xl glass-card border border-cyan-500/30 overflow-hidden shadow-2xl shadow-cyan-950/40">
+            
+            <!-- macOS Window Header Bar -->
+            <div class="px-4 py-3 bg-[#080d1a] border-b border-slate-800/80 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
               </div>
+              <span class="text-xs font-mono text-slate-400 tracking-wider">developer_preview.mp4</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                LIVE
+              </span>
+            </div>
 
+            <!-- Video Display Container -->
+            <div class="relative bg-black aspect-[4/3] overflow-hidden">
+              <video 
+                id="heroVideo"
+                autoplay 
+                loop 
+                muted 
+                playsinline 
+                preload="auto" 
+                poster="./IMAGES/video-thumbnail.jpg"
+                class="w-full h-full object-cover">
+                <source src="./IMAGES/គ្រាន់តែកែរអោយវីដេអូនេះមានភាពទ.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
 
-      
-      <div class="icon3"> 
-    <img src="./IMAGES/Screenshot 2025-12-28 172811.png" >
-    <p class="dic">Make CV:
-      
-    </p>
-  </div>
+              <!-- Audio & Fullscreen Overlay Controls on Video -->
+              <div class="absolute top-3 right-3 z-10 flex items-center gap-1.5">
+                <button id="toggleAudioBtn" class="p-1.5 px-2.5 rounded-lg bg-black/60 backdrop-blur-md text-[11px] font-mono text-cyan-300 hover:text-white border border-cyan-500/40 flex items-center gap-1">
+                  <i class="bi bi-volume-mute-fill" id="audioIcon"></i>
+                  <span id="audioText">Muted</span>
+                </button>
+                <button id="expandVideoBtn" class="p-1.5 px-2 rounded-lg bg-black/60 backdrop-blur-md text-[11px] font-mono text-slate-300 hover:text-cyan-300 border border-slate-700 flex items-center" title="Fullscreen">
+                  <i class="bi bi-fullscreen"></i>
+                </button>
+              </div>
+            </div>
 
-  <div class="icon3"> 
-    <img src="./IMAGES/home-service-app-screen-01.png" >
-    <p class="dic">Make app:
-      
-    </p>
-  </div>
-  
+            <!-- Under-Video Metrics Footer Bar (Matching Image 2) -->
+            <div class="grid grid-cols-3 divide-x divide-slate-800 bg-[#070b16] py-3.5 text-center">
+              <div>
+                <div class="text-lg sm:text-xl font-bold font-mono text-cyan-400">10+</div>
+                <div class="text-[11px] text-slate-400 mt-0.5">Live Apps</div>
+              </div>
+              <div>
+                <div class="text-lg sm:text-xl font-bold font-mono text-indigo-400">20+</div>
+                <div class="text-[11px] text-slate-400 mt-0.5">Designs</div>
+              </div>
+              <div>
+                <div class="text-lg sm:text-xl font-bold font-mono text-emerald-400">100%</div>
+                <div class="text-[11px] text-slate-400 mt-0.5">Dedication</div>
+              </div>
+            </div>
 
-  
-      
+          </div>
+        </div>
 
+      </div>
+    </div>
+  </header>
+
+  <section id="aboutme" class="py-16 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/60">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="tech-badge px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider">
+        Profile Overview
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+        About <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Choem Sokchea</span>
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base mt-3">
+        Known professionally as CHEA-FEVER. A disciplined, detail-oriented Information Technology student and Front-End Developer with proven experience in team coordination, modern web design, and digital graphics.
+      </p>
     </div>
 
-
-   <!--End My SERVICE-->
-   <div class="pricing-wrapper mt-5" data-aos="fade-up">
-    <header class="pricing-header">
-        <h1>Special offer!</h1>
-        <h2>Choose your pack today</h2>
-    </header>
-
-    <div class="pricing-container">
-        <div class="pricing-card">
-            <p class="plan-name">Make website </p>
-            <div class="price"><span>$</span>59</div>
-            <p class="billing">1 Website</p>
-            <ul class="features">
-                <li>1 Users</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-                <li>Feature 4</li>
-            </ul>
-        <a href="https://t.me/+855886700590" target="_blank" class="btn btn-purple">
-  GET PLAN
-</a>
-
+    <!-- About Content with Retained Avatar -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative group">
+          <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500 to-indigo-600 opacity-25 group-hover:opacity-50 blur transition duration-300"></div>
+          <div class="relative rounded-3xl overflow-hidden glass-card p-2">
+            <img 
+              src="./IMAGES/me.jpg" 
+              alt="Choem Sokchea" 
+              class="rounded-2xl max-w-xs sm:max-w-sm w-full object-cover aspect-[4/5] shadow-xl" 
+            />
+            <div class="absolute bottom-5 left-5 right-5 p-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-slate-700/60 text-center">
+              <h4 class="text-white font-bold text-sm">Choem Sokchea (Chea-Fever)</h4>
+              <p class="text-cyan-400 text-xs font-mono">B.S. Information Technology &bull; AEU</p>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="pricing-card">
-            <p class="plan-name">Make APP</p>
-            <div class="price"><span>$</span>59</div>
-            <p class="billing">1 APP</p>
-            <ul class="features">
-                <li>1 Users</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-                <li>Feature 4</li>
-            </ul>
-        <a href="https://t.me/+855886700590" target="_blank" class="btn btn-purple">
-  GET PLAN
-</a>
-
-        </div>
-
-        <div class="pricing-card">
-            <p class="plan-name">Make Posters</p>
-            <div class="price"><span>$</span>10</div>
-            <p class="billing">1 poster</p>
-            <ul class="features">
-                <li>1Users</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-                <li>Feature 4</li>
-            </ul>
-           <a href="https://t.me/+855886700590" target="_blank" class="btn btn-purple">
-  GET PLAN
-</a>
-
-        </div>
-        <div class="pricing-card">
-            <p class="plan-name">Make CV</p>
-            <div class="price"><span>$</span>2.5</div>
-            <p class="billing">1 CV</p>
-            <ul class="features">
-                <li>1Users</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-                <li>Feature 4</li>
-            </ul>
-           <a href="https://t.me/+855886700590" target="_blank" class="btn btn-purple">
-  GET PLAN
-</a>
-
-        </div>
-        <div class="pricing-card">
-            <p class="plan-name">Make File </p>
-            <div class="price"><span>$</span>25</div>
-            <p class="billing">1 File</p>
-            <ul class="features">
-                <li>1Users</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-                <li>Feature 4</li>
-            </ul>
-           <a href="https://t.me/+855886700590" target="_blank" class="btn btn-purple">
-  GET PLAN
-</a>
-
-        </div>
-        <div class="pricing-card">
-            <p class="plan-name">Logo</p>
-            <div class="price"><span>$</span>5</div>
-            <p class="billing">1 CV</p>
-            <ul class="features">
-                <li>1Users</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-                <li>Feature 4</li>
-            </ul>
-           <a href="https://t.me/+855886700590" target="_blank" class="btn btn-purple">
-  GET PLAN
-</a>
-
-        </div>
-    </div>
-</div>
-<!-- cv -->
-  <div class="top"></div>
- <h1 id="my_services" ></h1>
-  <h1 class="my_projects">MY CV</h1>
-  <section id="cv" class="py-5 bg-dark text-white">
-  <div class="container text-center">
-    
-    <h2 class="text-uppercase fw-bold mb-4">My Curriculum Vitae</h2>
-    <p class="text-muted mb-5">View my professional background or download a copy for your records.</p>
-
-    <div class="mb-5 d-flex flex-column flex-sm-row justify-content-center gap-3">
-      <a href="./CV Choem Sokchea.pdf" download="Choem_Sokchea_CV.pdf" class="btn btn-primary btn-lg px-4 py-2 text-uppercase">
-        <i class="bi bi-download me-2"></i> Download CV (PDF)
-      </a>
-      <a href="./CV Choem Sokchea.pdf" target="_blank" class="btn btn-outline-light btn-lg px-4 py-2 text-uppercase">
-        <i class="bi bi-eye me-2"></i> View Full Screen
-      </a>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-9 col-xl-8">
-        <div class="ratio ratio-4x3 border border-secondary rounded shadow-sm bg-light d-none d-md-block">
-          <iframe 
-            src="./CV Choem Sokchea.pdf" 
-            title="Curriculum Vitae Preview" 
-            allow="autoplay">
-          </iframe>
-        </div>
-        
-        <div class="card bg-secondary text-white p-4 d-block d-md-none border-0 rounded shadow">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Viewing on Mobile?</h5>
-            <p class="card-text text-light small">For the best reading experience on smaller smartphone screens, please open or download the PDF file directly.</p>
-            <a href="./CV Choem Sokchea.pdf" target="_blank" class="btn btn-light text-dark fw-bold w-100 mt-2">
-              Open CV Document
+      <div class="lg:col-span-7 space-y-6">
+        <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <i class="bi bi-person-lines-fill text-cyan-400"></i>
+            Professional Profile
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            I am an Information Technology student at <strong class="text-white">Asia Euro University (AEU)</strong>. I specialize in designing and engineering high-conversion, responsive front-end interfaces, collaborating within Agile student teams, and bridging the gap between technical logic and graphic design aesthetics.
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            I maintain exceptional attention to detail, embrace rapid problem-solving, and have completed numerous real-world web applications and design systems ready for immediate commercial application.
+          </p>
+          
+          <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-4 items-center">
+            <span class="text-xs text-slate-400 font-mono">Direct Communication:</span>
+            <a href="https://t.me/+855886700590" target="_blank" class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-lg bg-blue-500/10 text-cyan-300 hover:bg-blue-500/20 transition-all border border-blue-500/30">
+              <img src="./IMAGES/telegram.png" alt="Telegram" class="w-4 h-4"> Telegram (+855 88 670 0590)
+            </a>
+            <a href="https://www.facebook.com/cheim.sokchai" target="_blank" class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-lg bg-blue-600/10 text-blue-400 hover:bg-blue-600/20 transition-all border border-blue-600/30">
+              <img src="./IMAGES/facebook.png" alt="Facebook" class="w-4 h-4"> Facebook Profile
             </a>
           </div>
         </div>
-        
       </div>
     </div>
 
-  </div>
-</section>
-   <!--Footer -->
-     
- <footer data-aos="fade-down" >
-  
-  <div class="thank_you">
-    <p class="read"> THANK YOU </p>
-    <p class="texts">
-       Thank you for useing my website wish you have a godod day. <br>
-       If you want attach me you can attech me through Facebook or <br>
-       Talagram above.
+    <!-- Education & Work Experience Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Education Card -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-2xl text-blue-400">
+            <i class="bi bi-mortarboard-fill"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white">Education Background</h3>
+            <p class="text-xs text-slate-400 font-mono">Academic Track & Qualifications</p>
+          </div>
+        </div>
 
-    </p>
-  </div>
-  <div class="discover">
-     <p class="read"> DISVOVER</p>
-    <p class="texts">
-      <ul>
-        <li>Buy and sell </li>
-        <li>Merchant</li>
-        <li>Giving backe</li>
-        <li>Help and support</li>
-      </ul>
-    </p>
-  </div>
-   <div class="about">
-     <h1 class="read"> ABOUT </h1>
-    <p class="texts">
-      <ul>
-        <li>HTMl </li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>PHP</li>
-        <li>SQL</li>
-      </ul>
-    </p>
-  </div>
-  <div class="social">
-     <p class="read"> SOCIAL</p>
-    <p class="texts">
-      <ul>
-        <a href="https://www.facebook.com/cheim.sokchai" target="_blank"
-            >
-            <li>Facebook  </li>
-            </a
-          >
-        <a href="https://t.me/+855886700590" target="_blank">
-          <li>Telegram</li>
+        <div class="space-y-6 relative border-l-2 border-slate-800 ml-4 pl-6">
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-cyan-400 ring-4 ring-slate-900"></span>
+            <span class="tech-badge text-[11px] px-2.5 py-0.5 rounded font-mono font-bold">Currently Enrolled</span>
+            <h4 class="text-base font-bold text-white mt-1">Asia Euro University (AEU)</h4>
+            <p class="text-xs font-semibold text-cyan-400">Bachelor of Science in Information Technology</p>
+            <p class="text-xs text-slate-400 mt-1">Focusing on front-end development, backend frameworks, database architectures, and networking.</p>
+          </div>
 
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-slate-600 ring-4 ring-slate-900"></span>
+            <span class="text-[11px] px-2.5 py-0.5 rounded font-mono text-slate-400 bg-slate-800">2021 &ndash; 2023</span>
+            <h4 class="text-base font-bold text-white mt-1">Sok An Tonleab High School</h4>
+            <p class="text-xs text-slate-300">High School Diploma (Grade D Certificate)</p>
+          </div>
+
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-slate-600 ring-4 ring-slate-900"></span>
+            <span class="text-[11px] px-2.5 py-0.5 rounded font-mono text-slate-400 bg-slate-800">2018 &ndash; 2020</span>
+            <h4 class="text-base font-bold text-white mt-1">Vatong Secondary School</h4>
+            <p class="text-xs text-slate-300">Secondary Education Diploma (Honors GPA 10.00)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work Experience Card -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-2xl text-indigo-400">
+            <i class="bi bi-briefcase-fill"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white">Work Experience</h3>
+            <p class="text-xs text-slate-400 font-mono">Professional & Technical Roles</p>
+          </div>
+        </div>
+
+        <div class="space-y-6 relative border-l-2 border-slate-800 ml-4 pl-6">
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-indigo-400 ring-4 ring-slate-900"></span>
+            <span class="tech-badge text-[11px] px-2.5 py-0.5 rounded font-mono font-bold">2024 &ndash;2027</span>
+            <h4 class="text-base font-bold text-white mt-1">Group Project Leader</h4>
+            <p class="text-xs font-semibold text-indigo-400">Technical Team & Sprint Coordination</p>
+            <p class="text-xs text-slate-400 mt-1">Directed peer programming workflows, milestone deadlines, UI consistency, and git repository integration.</p>
+          </div>
+
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-slate-600 ring-4 ring-slate-900"></span>
+            <span class="text-[11px] px-2.5 py-0.5 rounded font-mono text-slate-400 bg-slate-800"> 2026</span>
+            <h4 class="text-base font-bold text-white mt-1">Backend Web Developer</h4>
+            <p class="text-xs text-slate-300">Etec Center </p>
+            <p class="text-xs text-slate-400 mt-1">Make and Fix API Testing Made Tour Tip Trip System 3 Month .</p>
+          </div>
+
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-slate-600 ring-4 ring-slate-900"></span>
+            <span class="text-[11px] px-2.5 py-0.5 rounded font-mono text-slate-400 bg-slate-800">2018 &ndash; 2024</span>
+            <h4 class="text-base font-bold text-white mt-1">Customer Sales & Support Services</h4>
+            <p class="text-xs text-slate-300">Client Operations & Technical Support</p>
+            <p class="text-xs text-slate-400 mt-1">Ensured excellent client relations, handled queries efficiently, and maintained detailed sales reports.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Skills" class="py-16 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/60">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+        Technical Skills &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Tool Stack</span>
+      </h2>
+      <p class="text-slate-400 text-xs sm:text-sm md:text-base mt-3 max-w-2xl mx-auto leading-relaxed">
+        Comprehensive toolkit spanning front-end web development, backend MVC frameworks, databases, version control, and creative design software.
+      </p>
+    </div>
+
+    <!-- Skills 5x4 Grid Exactly Matching Screenshot 2 -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5 sm:gap-4 lg:gap-5">
+      
+      <!-- 1: HTML5 -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-orange-500/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/174854.png" alt="HTML5" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">HTML5</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 2: CSS3 / Tailwind -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-blue-500/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/5968242.png" alt="CSS3 / Tailwind" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">CSS3 / Tailwind</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 3: JavaScript (ES6+) -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-amber-400/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/1199124.png" alt="JavaScript (ES6+)" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">JavaScript (ES6+)</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 4: PHP Backend -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-indigo-400/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/php logo.png" alt="PHP Backend" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">PHP Backend</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 5: Laravel Framework -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-rose-500/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/Laravel-Logo.wine.svg" alt="Laravel Framework" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Laravel Framework</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 6: C++ Programming -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-sky-500/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/6132222.png" alt="C++ Programming" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">C++ Programming</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 7: Java OOP -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-red-500/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/1183669.png" alt="Java OOP" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Java OOP</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 8: SQL & Relational DB -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-amber-500/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/2772128.png" alt="SQL & Relational DB" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">SQL &amp; Relational DB</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 9: phpMyAdmin -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-yellow-500/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/PhpMyAdmin_logo.svg.webp" alt="phpMyAdmin" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">phpMyAdmin</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 10: Postman API Testing -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-orange-500/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/postmanpmg.webp" alt="Postman API Testing" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Postman API Testing</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 11: Git Version Control -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-orange-600/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/git 2.png" alt="Git Version Control" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Git Version Control</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 12: GitHub Collaboration -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-slate-400/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/Git hub.png" alt="GitHub Collaboration" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">GitHub Collaboration</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 13: Network Configuration -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-emerald-500/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/10414224.png" alt="Network Configuration" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Network Configuration</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Practical</span>
+      </div>
+
+      <!-- 14: Adobe Photoshop -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-blue-500/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/5210800.png" alt="Adobe Photoshop" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Adobe Photoshop</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 15: Adobe Illustrator -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-amber-600/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/adobe-illustrator-icon-free-png.webp" alt="Adobe Illustrator" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Adobe Illustrator</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 16: CorelDraw Vector -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-emerald-600/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/16064387.png" alt="CorelDraw Vector" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">CorelDraw Vector</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 17: CapCut Video Editing -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-sky-400/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/Cabcap.webp" alt="CapCut Video Editing" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">CapCut Video Editing</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Intermediate</span>
+      </div>
+
+      <!-- 18: Microsoft Word -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-blue-600/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/vecteezy_microsoft-word-icon-logo-symbol_27179388.png" alt="Microsoft Word" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Microsoft Word</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Documentation</span>
+      </div>
+
+      <!-- 19: Microsoft Excel -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-emerald-500/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/Microsoft_Excel-Logo.wine.svg" alt="Microsoft Excel" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Microsoft Excel</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Data &amp; Analysis</span>
+      </div>
+
+      <!-- 20: MS PowerPoint -->
+      <div class="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-orange-600/60 transition-all group min-h-[165px]">
+        <div class="w-12 h-12 rounded-xl bg-slate-900/90 flex items-center justify-center p-2 mb-3 shadow-inner group-hover:scale-110 transition-transform">
+          <img src="./IMAGES/power pont.svg" alt="MS PowerPoint" class="w-8 h-8 object-contain" />
+        </div>
+        <h4 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">MS PowerPoint</h4>
+        <span class="text-[11px] text-cyan-400 font-mono mt-1">Presentations</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="my_project" class="py-16 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/60">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="tech-badge px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider">
+        Production & Code
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+        Software & Web <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Projects</span>
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base mt-3">
+        Click on any live project card or image to visit the live deployment or view source details.
+      </p>
+    </div>
+
+    <!-- Software Projects -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+      
+      <!-- Project 1: Electronic Shop -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <a href="https://cheafever.github.io/myfirstwebt-chea/" target="_blank" class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/Electronic.png" alt="Electronic Website" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-cyan-500/90 text-slate-950 px-2.5 py-1 rounded-md shadow">
+            Live Preview <i class="bi bi-box-arrow-up-right ml-1"></i>
+          </span>
         </a>
-        <a href="https://www.youtube.com/@cheaposenglishandmusic8550" target="_blank">
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">HTML5</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">CSS3</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">JavaScript</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Electronic Storefront</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Curated catalog of electronic gadgets and consumer devices with interactive UI components and modern styling.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <a href="https://cheafever.github.io/myfirstwebt-chea/" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              Launch Live App <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-          <li>Youtube</li>
+      <!-- Project 2: POS System -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <a href="https://cheafever.github.io/PosSystem/" target="_blank" class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/POS.jpg" alt="POS System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-cyan-500/90 text-slate-950 px-2.5 py-1 rounded-md shadow">
+            Live Preview <i class="bi bi-box-arrow-up-right ml-1"></i>
+          </span>
         </a>
-      </ul>
-    </p>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">JavaScript</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">POS UI</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Billing</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Point of Sale (POS) System</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Real-time inventory and checkout management system with automated cart calculations and product handling.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <a href="https://cheafever.github.io/PosSystem/" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              Launch Live App <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Room Management System -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <a href="https://cheafever.github.io/roommannagement-stem/" target="_blank" class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/Room Mannagement.jpg" alt="Room Management System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-cyan-500/90 text-slate-950 px-2.5 py-1 rounded-md shadow">
+            Live Preview <i class="bi bi-box-arrow-up-right ml-1"></i>
+          </span>
+        </a>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Web System</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Admin Dashboard</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Room & Venue Management</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Intuitive hotel/room allocation dashboard designed for tracking availability, scheduling, and customer check-ins.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <a href="https://cheafever.github.io/roommannagement-stem/" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              Launch Live App <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Ticket System -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <a href="https://cheafever.github.io/ticket-system/" target="_blank" class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/Ticekrt.jpg" alt="Ticket Booking System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-cyan-500/90 text-slate-950 px-2.5 py-1 rounded-md shadow">
+            Live Preview <i class="bi bi-box-arrow-up-right ml-1"></i>
+          </span>
+        </a>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Booking</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Front-End</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Event Ticket Booking System</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Modern ticket reservation interface with seat selection, pass generation, and clear pricing breakdowns.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <a href="https://cheafever.github.io/ticket-system/" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              Launch Live App <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Laravel Student Management -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <a href="https://cheafever.github.io/ticket-system/" target="_blank" class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/Student.jpg" alt="Student Management System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-rose-500 text-white px-2.5 py-1 rounded-md shadow">
+            Laravel Framework
+          </span>
+        </a>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Laravel</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">MySQL</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Blade MVC</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">School & Student Information System</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Full enterprise database system for managing student records, course enrolments, grade tracking, and instructor data.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <a href="https://cheafever.github.io/ticket-system/" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              View Project Portal <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: Chea_Shop Netlify -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <a href="https://lighthearted-cucurucho-a3fa41.netlify.app/" target="_blank" class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/Screenshot 2026-07-02 232926.png" alt="Chea Shop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-cyan-500/90 text-slate-950 px-2.5 py-1 rounded-md shadow">
+            Live Netlify <i class="bi bi-box-arrow-up-right ml-1"></i>
+          </span>
+        </a>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Bootstrap</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">E-Commerce</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Chea Fashion Boutique</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              High-converting responsive clothing store showcasing apparel items, product cards, category filters, and quick cart previews.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <a href="https://lighthearted-cucurucho-a3fa41.netlify.app/" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              Launch Store <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7: Khmer News -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <a href="https://cheafever.github.io/Khmer-News/" target="_blank" class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/news.jpg" alt="Khmer News Portal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-cyan-500/90 text-slate-950 px-2.5 py-1 rounded-md shadow">
+            Live News <i class="bi bi-box-arrow-up-right ml-1"></i>
+          </span>
+        </a>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Media Feed</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Responsive</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Khmer Digital News Portal</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Editorial web portal featuring headlines, categorized breaking news, modern typography, and mobile-first readability.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <a href="https://cheafever.github.io/Khmer-News/" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              Read News Site <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 8: GitLab Node Backend -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <a href="https://gitlab.com/chiaposall/food_delivery_back_endbest" target="_blank" class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/GitLap.png" alt="GitLab Node.js Backend" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-orange-600 text-white px-2.5 py-1 rounded-md shadow">
+            GitLab Repo <i class="bi bi-code-square ml-1"></i>
+          </span>
+        </a>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Node.js</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">REST API</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Database</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Food Delivery Backend API</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Robust backend service connected to Node.js database architectures, managing food orders, user authentication, and endpoints.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <a href="https://gitlab.com/chiaposall/food_delivery_back_endbest" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              Browse GitLab Code <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 9: Java Project Suite -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <div class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/Screenshot 2025-12-12 201303.png" alt="Java Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-red-600 text-white px-2.5 py-1 rounded-md shadow">
+            Java OOP
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">OOP</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Algorithms</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Java Application Suite</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Consolidated Java algorithms suite featuring product management, object-oriented data structures, and mathematical computation engines.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80">
+            <span class="text-xs font-mono text-slate-400">Includes: Product Management, Calculator Processes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 10: C++ Suite -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <div class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/c++PRO.pngJECT.png" alt="C++ Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-blue-600 text-white px-2.5 py-1 rounded-md shadow">
+            C++ Suite
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Data Structures</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">CLI Systems</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">C++ High Performance Suite</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Four structured C++ software applications: Student Management, Product Management, Calculator Processor, and Grammar Assessment Engine.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80">
+            <span class="text-xs font-mono text-slate-400">4 Integrated C++ Systems Built</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 11: Photoshop Creative Project -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <div class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/COVER.jpg" alt="Photoshop Creative Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-indigo-600 text-white px-2.5 py-1 rounded-md shadow">
+            Adobe Photoshop
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Visual Media</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Retouching</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Photoshop Media & Posters</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Extensive digital design project comprising marketing covers, commercial posters, and iconography.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80">
+            <span class="text-xs font-mono text-slate-400">High-Resolution Creative Visuals</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 12: CorelDraw Vector Project -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 hover:border-cyan-500/40 group">
+        <div class="block relative overflow-hidden aspect-video bg-slate-950">
+          <img src="./IMAGES/CorelDraw-Tools.jpg" alt="CorelDraw Vector Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-emerald-600 text-white px-2.5 py-1 rounded-md shadow">
+            CorelDraw
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Vector Graphics</span>
+              <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Print & Web</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">CorelDraw Vector Production</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Vector graphic design portfolio focusing on scalable logos, print materials, posters, and corporate branding assets.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/80">
+            <span class="text-xs font-mono text-slate-400">Scalable Vector Assets</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="design_projects" class="py-16 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/60">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="tech-badge px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider">
+        UI/UX & Creative Assets
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+        Graphic Design & <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Visual Portfolio</span>
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base mt-3">
+        Click on any visual poster or logo below to inspect in high-resolution full-screen modal view.
+      </p>
+    </div>
+
+    <!-- Gallery Grid with all 24 designs -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="designGallery">
+      
+      <!-- 1 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/COVER.jpg" class="card-img-top w-full h-full object-cover" alt="Hero Cover Art" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Hero Cover Art</h5>
+          <p class="text-xs text-slate-400 mt-1">Creative digital cover artwork & visual composition.</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Poster.jpg" class="card-img-top w-full h-full object-cover" alt="Cleaning Service Poster" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Cleaning Service Poster</h5>
+          <p class="text-xs text-slate-400 mt-1">Commercial service marketing banner.</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Cofe Poster.jpg" class="card-img-top w-full h-full object-cover" alt="Cafe Poster Design" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Coffee Bar Poster</h5>
+          <p class="text-xs text-slate-400 mt-1">Branded promotional coffee drink design.</p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/63d3a38a-d50a-45fc-8db3-50163939350c-cover.png" class="card-img-top w-full h-full object-cover" alt="UI Application Blueprint" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">UI Application Architecture</h5>
+          <p class="text-xs text-slate-400 mt-1">Mobile application interface layout and user experience flow.</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Burger Menu.jpg" class="card-img-top w-full h-full object-cover" alt="Burger Menu Card" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Burger Food Menu</h5>
+          <p class="text-xs text-slate-400 mt-1">Restaurant menu card layout with pricing and imagery.</p>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Caltex.jpg" class="card-img-top w-full h-full object-cover" alt="Caltex Poster" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Caltex Brand Campaign</h5>
+          <p class="text-xs text-slate-400 mt-1">Commercial automotive & lubrication service banner.</p>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Promotion Design.jpg" class="card-img-top w-full h-full object-cover" alt="Promotion Design" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Special Promotion Poster</h5>
+          <p class="text-xs text-slate-400 mt-1">Eye-catching retail discount promotion banner.</p>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Humbergure copy.jpg" class="card-img-top w-full h-full object-cover" alt="Burger Poster" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Gourmet Burger Poster</h5>
+          <p class="text-xs text-slate-400 mt-1">Bold culinary advertising concept.</p>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Vacation Package.jpg" class="card-img-top w-full h-full object-cover" alt="Vacation Package" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Vacation Tour Package</h5>
+          <p class="text-xs text-slate-400 mt-1">Travel and exploration tour poster design.</p>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Car Shop Poster.jpg" class="card-img-top w-full h-full object-cover" alt="Car Shop Poster" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Automotive Showroom Poster</h5>
+          <p class="text-xs text-slate-400 mt-1">Dealership branding and car features showcase.</p>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Travell all over the world.jpg" class="card-img-top w-full h-full object-cover" alt="Travel Around The World" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Travel Worldwide Campaign</h5>
+          <p class="text-xs text-slate-400 mt-1">Airport & flight booking marketing flyer.</p>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Khmer City in the Fututure.jpg" class="card-img-top w-full h-full object-cover" alt="Khmer City in the Future" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Future Khmer Metropolis</h5>
+          <p class="text-xs text-slate-400 mt-1">Futuristic smart-city visual concept art.</p>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Poster Looking For Staff Food.jpg" class="card-img-top w-full h-full object-cover" alt="Food Staff Recruitment" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">F&B Staff Recruitment</h5>
+          <p class="text-xs text-slate-400 mt-1">Recruitment hiring poster for restaurant staff.</p>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Poster Looking For Staff For Mart.jpg" class="card-img-top w-full h-full object-cover" alt="Mart Staff Recruitment" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Convenience Mart Hiring</h5>
+          <p class="text-xs text-slate-400 mt-1">HR job opening announcement poster.</p>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Poster Looking For Staff Market.jpg" class="card-img-top w-full h-full object-cover" alt="Supermarket Hiring Poster" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Supermarket Careers Poster</h5>
+          <p class="text-xs text-slate-400 mt-1">Retail career opportunity design.</p>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Coffee Poster.jpg" class="card-img-top w-full h-full object-cover" alt="Coffee Art Poster" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Artisan Coffee Poster</h5>
+          <p class="text-xs text-slate-400 mt-1">Warm aesthetic coffee advert.</p>
+        </div>
+      </div>
+
+      <!-- 17 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Cooffe Poster.png" class="card-img-top w-full h-full object-cover" alt="Minimal Coffee Design" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Minimalist Coffee Ad</h5>
+          <p class="text-xs text-slate-400 mt-1">Clean and modern cafe branding visual.</p>
+        </div>
+      </div>
+
+      <!-- 18 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Burger Poster.jpg" class="card-img-top w-full h-full object-cover" alt="Fast Food Burger Poster" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Fresh Burger Delight</h5>
+          <p class="text-xs text-slate-400 mt-1">High-impact fast-food product promo.</p>
+        </div>
+      </div>
+
+      <!-- 19 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Educationlogo.jpg" class="card-img-top w-full h-full object-cover" alt="Education Logo" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Education Brand Identity</h5>
+          <p class="text-xs text-slate-400 mt-1">Academic emblem & educational vector logo.</p>
+        </div>
+      </div>
+
+      <!-- 20 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/SCHOOLLOGO.jpg" class="card-img-top w-full h-full object-cover" alt="School Logo" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Institutional School Logo</h5>
+          <p class="text-xs text-slate-400 mt-1">Professional crest for learning institutions.</p>
+        </div>
+      </div>
+
+      <!-- 21 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/CafeLogo.jpg" class="card-img-top w-full h-full object-cover" alt="Cafe Logo" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Coffee House Logo</h5>
+          <p class="text-xs text-slate-400 mt-1">Trendy coffee brand identity & badge.</p>
+        </div>
+      </div>
+
+      <!-- 22 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Khmer New Year Poster.jpg" class="card-img-top w-full h-full object-cover" alt="Khmer New Year Poster" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Khmer New Year Celebration</h5>
+          <p class="text-xs text-slate-400 mt-1">Cultural festival celebration artwork.</p>
+        </div>
+      </div>
+
+      <!-- 23 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Pjumben Khmer Vastival.jpg" class="card-img-top w-full h-full object-cover" alt="Pchum Ben Festival" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Pchum Ben Cultural Festival</h5>
+          <p class="text-xs text-slate-400 mt-1">Traditional Khmer holiday festival design.</p>
+        </div>
+      </div>
+
+      <!-- 24 -->
+      <div class="card project glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-cyan-400/50 transition-all">
+        <div class="img-zoom relative aspect-[4/5] bg-slate-900">
+          <img src="IMAGES/Pisak Bojea.jpg" class="card-img-top w-full h-full object-cover" alt="Visak Bochea Poster" />
+          <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-transparent transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="p-3 rounded-full bg-slate-950/80 text-cyan-400 text-lg shadow-xl"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+        <div class="p-4 border-t border-slate-800/80">
+          <h5 class="text-sm font-bold text-white group-hover:text-cyan-400">Visak Bochea Religious Festival</h5>
+          <p class="text-xs text-slate-400 mt-1">Spiritual celebration poster for Buddhist holiday.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="my_services" class="py-16 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/60">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="tech-badge px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider">
+        Technical Capabilities
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+        Professional <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Services</span>
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base mt-3">
+        Tailored technical and creative services built for businesses, individuals, and organizational teams.
+      </p>
+    </div>
+
+    <!-- 6 Service Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mb-16">
+      
+      <!-- Service 1: Website Service -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 group hover:border-cyan-500/50">
+        <div class="h-44 overflow-hidden bg-slate-950">
+          <img src="./IMAGES/Webservice.jpg" alt="Website Development Service" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Front-End & Full-Stack</span>
+            <h3 class="text-lg font-bold text-white mt-2 group-hover:text-cyan-400 transition-colors">Web Development Service</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Custom responsive website design, single page apps, e-commerce stores, and high-performance front-end integrations.
+            </p>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 inline-flex items-center text-xs font-bold text-cyan-400 hover:text-cyan-300">
+            Request Service <i class="bi bi-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 2: Poster Service -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 group hover:border-cyan-500/50">
+        <div class="h-44 overflow-hidden bg-slate-950">
+          <img src="./IMAGES/Poster.jpg" alt="Poster Service" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Graphic Design</span>
+            <h3 class="text-lg font-bold text-white mt-2 group-hover:text-cyan-400 transition-colors">Commercial Poster Design</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Eye-catching print and social media posters, promotional flyers, menu layouts, and recruitment ads.
+            </p>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 inline-flex items-center text-xs font-bold text-cyan-400 hover:text-cyan-300">
+            Request Service <i class="bi bi-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 3: Logo Service -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 group hover:border-cyan-500/50">
+        <div class="h-44 overflow-hidden bg-slate-950">
+          <img src="./IMAGES/Logoservice.jpg" alt="Logo Design Service" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Branding Identity</span>
+            <h3 class="text-lg font-bold text-white mt-2 group-hover:text-cyan-400 transition-colors">Brand & Logo Design</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Memorable logos, modern vector typography, emblem insignias, and complete brand color schemes.
+            </p>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 inline-flex items-center text-xs font-bold text-cyan-400 hover:text-cyan-300">
+            Request Service <i class="bi bi-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 4: Administration Service -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 group hover:border-cyan-500/50">
+        <div class="h-44 overflow-hidden bg-slate-950">
+          <img src="./IMAGES/Aminservice.jpg" alt="Administration Service" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">IT & Office Admin</span>
+            <h3 class="text-lg font-bold text-white mt-2 group-hover:text-cyan-400 transition-colors">IT Administration Support</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Office file formatting, Excel spreadsheets, administrative data entry, network setups, and documentation.
+            </p>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 inline-flex items-center text-xs font-bold text-cyan-400 hover:text-cyan-300">
+            Request Service <i class="bi bi-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 5: CV Design -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 group hover:border-cyan-500/50">
+        <div class="h-44 overflow-hidden bg-slate-950">
+          <img src="./IMAGES/Screenshot 2025-12-28 172811.png" alt="CV Creation Service" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Career Documents</span>
+            <h3 class="text-lg font-bold text-white mt-2 group-hover:text-cyan-400 transition-colors">Professional CV & Resume</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              ATS-friendly, modern IT CV designs with clean typography and layout formatting to help candidates land interviews.
+            </p>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 inline-flex items-center text-xs font-bold text-cyan-400 hover:text-cyan-300">
+            Request Service <i class="bi bi-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 6: Mobile App Screen -->
+      <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-slate-800 group hover:border-cyan-500/50">
+        <div class="h-44 overflow-hidden bg-slate-950">
+          <img src="./IMAGES/home-service-app-screen-01.png" alt="App UI Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="tech-badge text-[10px] font-mono px-2 py-0.5 rounded">Mobile UI/UX</span>
+            <h3 class="text-lg font-bold text-white mt-2 group-hover:text-cyan-400 transition-colors">Mobile App Interface Design</h3>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+              Cross-platform UI prototypes, application screen flows, onboarding screens, and mobile design kits.
+            </p>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 inline-flex items-center text-xs font-bold text-cyan-400 hover:text-cyan-300">
+            Request Service <i class="bi bi-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pricing Cards Container -->
+    <div class="glass-card rounded-3xl p-6 sm:p-10 border border-cyan-500/20 shadow-2xl">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="tech-badge px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase">Transparent Rates</span>
+        <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2">Special Service Packages</h3>
+        <p class="text-slate-400 text-xs sm:text-sm mt-2">Choose the package that fits your project needs or message me directly for custom agreements.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        
+        <!-- Plan 1 -->
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-400 flex flex-col justify-between transition-all">
+          <div>
+            <h4 class="text-sm font-bold text-white">Website</h4>
+            <div class="text-2xl font-black text-cyan-400 font-mono my-2">$59</div>
+            <p class="text-[11px] text-slate-400 font-mono">1 Responsive Web</p>
+            <ul class="text-[11px] text-slate-300 space-y-1 mt-3 border-t border-slate-800 pt-2">
+              <li>&bull; Responsive Layout</li>
+              <li>&bull; Clean Codebase</li>
+              <li>&bull; Hosting Setup</li>
+            </ul>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 w-full py-2 rounded-xl text-center text-xs font-bold bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500 hover:text-slate-950 transition-all">
+            Get Plan
+          </a>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-400 flex flex-col justify-between transition-all">
+          <div>
+            <h4 class="text-sm font-bold text-white">App UI</h4>
+            <div class="text-2xl font-black text-indigo-400 font-mono my-2">$59</div>
+            <p class="text-[11px] text-slate-400 font-mono">1 App Prototype</p>
+            <ul class="text-[11px] text-slate-300 space-y-1 mt-3 border-t border-slate-800 pt-2">
+              <li>&bull; Mobile Screens</li>
+              <li>&bull; Modern UX Flow</li>
+              <li>&bull; Exported Assets</li>
+            </ul>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 w-full py-2 rounded-xl text-center text-xs font-bold bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500 hover:text-white transition-all">
+            Get Plan
+          </a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-400 flex flex-col justify-between transition-all">
+          <div>
+            <h4 class="text-sm font-bold text-white">Poster</h4>
+            <div class="text-2xl font-black text-cyan-400 font-mono my-2">$10</div>
+            <p class="text-[11px] text-slate-400 font-mono">1 Poster Design</p>
+            <ul class="text-[11px] text-slate-300 space-y-1 mt-3 border-t border-slate-800 pt-2">
+              <li>&bull; High-Resolution</li>
+              <li>&bull; Print & Social</li>
+              <li>&bull; Quick Revisions</li>
+            </ul>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 w-full py-2 rounded-xl text-center text-xs font-bold bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500 hover:text-slate-950 transition-all">
+            Get Plan
+          </a>
+        </div>
+
+        <!-- Plan 4 -->
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-400 flex flex-col justify-between transition-all">
+          <div>
+            <h4 class="text-sm font-bold text-white">Modern CV</h4>
+            <div class="text-2xl font-black text-emerald-400 font-mono my-2">$2.5</div>
+            <p class="text-[11px] text-slate-400 font-mono">1 Polished CV</p>
+            <ul class="text-[11px] text-slate-300 space-y-1 mt-3 border-t border-slate-800 pt-2">
+              <li>&bull; Clean Layout</li>
+              <li>&bull; PDF + Word</li>
+              <li>&bull; HR-Targeted</li>
+            </ul>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 w-full py-2 rounded-xl text-center text-xs font-bold bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500 hover:text-slate-950 transition-all">
+            Get Plan
+          </a>
+        </div>
+
+        <!-- Plan 5 -->
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-400 flex flex-col justify-between transition-all">
+          <div>
+            <h4 class="text-sm font-bold text-white">Document</h4>
+            <div class="text-2xl font-black text-cyan-400 font-mono my-2">$25</div>
+            <p class="text-[11px] text-slate-400 font-mono">1 File / Report</p>
+            <ul class="text-[11px] text-slate-300 space-y-1 mt-3 border-t border-slate-800 pt-2">
+              <li>&bull; Typography</li>
+              <li>&bull; Proper Indexing</li>
+              <li>&bull; Clean Styling</li>
+            </ul>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 w-full py-2 rounded-xl text-center text-xs font-bold bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500 hover:text-slate-950 transition-all">
+            Get Plan
+          </a>
+        </div>
+
+        <!-- Plan 6 -->
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-400 flex flex-col justify-between transition-all">
+          <div>
+            <h4 class="text-sm font-bold text-white">Logo Concept</h4>
+            <div class="text-2xl font-black text-amber-400 font-mono my-2">$5</div>
+            <p class="text-[11px] text-slate-400 font-mono">1 Logo Design</p>
+            <ul class="text-[11px] text-slate-300 space-y-1 mt-3 border-t border-slate-800 pt-2">
+              <li>&bull; Vector Output</li>
+              <li>&bull; Transparent PNG</li>
+              <li>&bull; Icon Sizes</li>
+            </ul>
+          </div>
+          <a href="https://t.me/+855886700590" target="_blank" class="mt-4 w-full py-2 rounded-xl text-center text-xs font-bold bg-amber-500/20 text-amber-300 hover:bg-amber-500 hover:text-slate-950 transition-all">
+            Get Plan
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="cv" class="py-16 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/60">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <span class="tech-badge px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider">
+        Official Document
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+        Curriculum <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Vitae (CV)</span>
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base mt-3">
+        Examine my complete academic, programming, and professional experience or download a copy directly for HR evaluation.
+      </p>
+
+      <div class="mt-7 flex flex-wrap items-center justify-center gap-4">
+        <a href="./CV Choem Sokchea.pdf" download="Choem_Sokchea_CV.pdf" class="px-6 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20 hover:scale-105 transition-transform flex items-center gap-2">
+          <i class="bi bi-download"></i> Download CV (PDF)
+        </a>
+        <a href="./CV Choem Sokchea.pdf" target="_blank" class="px-6 py-3 rounded-xl font-bold text-sm glass-card border border-slate-700 text-slate-200 hover:border-cyan-400 hover:text-white transition-all flex items-center gap-2">
+          <i class="bi bi-box-arrow-up-right"></i> Open Full Screen
+        </a>
+      </div>
+    </div>
+
+    <!-- CV Interactive Document Viewer -->
+    <div class="max-w-4xl mx-auto">
+      <div class="glass-card rounded-2xl p-2 sm:p-4 border border-slate-800 shadow-2xl">
+        <!-- Desktop Embed -->
+        <div class="hidden md:block w-full rounded-xl overflow-hidden bg-slate-900 border border-slate-800" style="height: 680px;">
+          <iframe 
+            src="./CV Choem Sokchea.pdf" 
+            title="Curriculum Vitae Preview" 
+            class="w-full h-full border-0">
+          </iframe>
+        </div>
+
+        <!-- Mobile Notice -->
+        <div class="block md:hidden p-6 text-center">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-2xl flex items-center justify-center mx-auto mb-3">
+            <i class="bi bi-file-earmark-pdf"></i>
+          </div>
+          <h4 class="text-base font-bold text-white">Mobile PDF Preview</h4>
+          <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">
+            Mobile browsers offer the fastest experience when opening or downloading the document directly.
+          </p>
+          <a href="./CV Choem Sokchea.pdf" target="_blank" class="mt-4 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cyan-500 text-slate-950 font-bold text-xs">
+            <i class="bi bi-eye"></i> View PDF Document
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-16 border-t border-slate-800/80 bg-[#03060e] text-slate-400 py-14 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Col 1 -->
+      <div class="space-y-3">
+        <div class="flex items-center gap-3">
+          <img src="./IMAGES/cv.png" width="28" height="28" alt="Chea Fever" class="object-contain" />
+          <span class="text-white font-bold tracking-tight font-mono text-lg">CHOEM SOKCHEA</span>
+        </div>
+        <p class="text-xs leading-relaxed text-slate-400">
+          Thank you for visiting my professional portfolio. Feel free to contact me for front-end developer vacancies, IT administration, or freelance software design projects.
+        </p>
+        <div class="pt-1">
+          <a href="https://t.me/+855886700590" target="_blank" class="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-lg border border-emerald-500/20">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Available for Interviews
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="space-y-2.5">
+        <h4 class="text-sm font-bold text-white font-mono uppercase tracking-wider text-cyan-400">Navigation</h4>
+        <ul class="space-y-1.5 text-xs">
+          <li><a href="#" class="hover:text-cyan-400 transition-colors">Home Top</a></li>
+          <li><a href="#aboutme" class="hover:text-cyan-400 transition-colors">About & Education</a></li>
+          <li><a href="#Skills" class="hover:text-cyan-400 transition-colors">Skills & Tooling</a></li>
+          <li><a href="#my_project" class="hover:text-cyan-400 transition-colors">Software Projects</a></li>
+          <li><a href="#design_projects" class="hover:text-cyan-400 transition-colors">Design Showcase</a></li>
+          <li><a href="#cv" class="hover:text-cyan-400 transition-colors">Curriculum Vitae</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="space-y-2.5">
+        <h4 class="text-sm font-bold text-white font-mono uppercase tracking-wider text-cyan-400">Core Technologies</h4>
+        <ul class="space-y-1.5 text-xs">
+          <li><span class="text-slate-300">HTML5 & Semantic Markup</span></li>
+          <li><span class="text-slate-300">Modern CSS3 & Tailwind CSS</span></li>
+          <li><span class="text-slate-300">JavaScript ES6+</span></li>
+          <li><span class="text-slate-300">PHP & Laravel MVC</span></li>
+          <li><span class="text-slate-300">SQL & Relational Databases</span></li>
+          <li><span class="text-slate-300">C++ & Java Architectures</span></li>
+        </ul>
+      </div>
+
+      <!-- Col 4 -->
+      <div class="space-y-2.5">
+        <h4 class="text-sm font-bold text-white font-mono uppercase tracking-wider text-cyan-400">Connect Directly</h4>
+        <ul class="space-y-2 text-xs">
+          <li>
+            <a href="https://www.facebook.com/cheim.sokchai" target="_blank" class="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+              <img src="./IMAGES/facebook.png" class="w-4 h-4 object-contain" alt="Facebook" />
+              <span>Facebook Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/+855886700590" target="_blank" class="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+              <img src="./IMAGES/telegram.png" class="w-4 h-4 object-contain" alt="Telegram" />
+              <span>Telegram (+855 88 670 0590)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@feverchea007" target="_blank" class="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+              <img src="./IMAGES/tiktok.png" class="w-4 h-4 object-contain" alt="TikTok" />
+              <span>TikTok (@feverchea007)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@cheaposenglishandmusic8550" target="_blank" class="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+              <i class="bi bi-youtube text-red-500 text-sm"></i>
+              <span>YouTube Channel</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+      <p>&copy; 2026 CHOEM SOKCHEA (CHEA-FEVER). All Rights Reserved.</p>
+      <p class="font-mono text-[11px]">Crafted for IT Excellence & Recruiter Impact</p>
+    </div>
+  </footer>
+
+  <!-- Modal Lightbox for Fullscreen Image Preview -->
+  <div id="projectModal" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-sm items-center justify-center p-4">
+    <button id="closeModal" aria-label="Close modal" class="absolute top-5 right-5 text-white bg-slate-800/80 hover:bg-rose-600 rounded-full w-10 h-10 flex items-center justify-center transition-colors text-xl font-bold z-50 focus:outline-none">
+      &times;
+    </button>
+    
+    <div class="glass-card max-w-2xl w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-700 flex flex-col max-h-[90vh]">
+      <div class="bg-black/90 flex items-center justify-center overflow-hidden max-h-[65vh] p-2">
+        <img id="modalImg" src="" alt="Project Preview" class="max-w-full max-h-[60vh] object-contain rounded-lg" />
+      </div>
+      <div class="p-5 border-t border-slate-800 bg-slate-950/90">
+        <h3 id="modalTitle" class="text-lg font-bold text-white"></h3>
+        <p id="modalDesc" class="text-slate-400 text-xs sm:text-sm mt-1.5 leading-relaxed"></p>
+      </div>
+    </div>
   </div>
 
+  <script>
+    // Interactive Robot Drone Click Greeting
+    const robotBot = document.getElementById('flyingCyberBot');
+    const speechBubble = document.getElementById('botSpeechBubble');
+    const greetings = [
+      "👋 Hello HR Team! Hire Choem Sokchea!",
+      "🚀 100% Ready for Front-End Developer Roles!",
+      "⚡ Fast & Clean Codebase Engineered!",
+      "💼 Let's schedule an interview today!"
+    ];
+    let greetIndex = 0;
 
- </footer> 
- <!--end Footer -->
+    if (robotBot && speechBubble) {
+      robotBot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        speechBubble.textContent = greetings[greetIndex % greetings.length];
+        greetIndex++;
+        speechBubble.style.opacity = '1';
+        setTimeout(() => {
+          speechBubble.style.opacity = '0';
+        }, 3200);
+      });
+    }
 
+    // Hero Full-Screen Video Controls
+    const heroVideo = document.getElementById('heroVideo');
+    const toggleAudioBtn = document.getElementById('toggleAudioBtn');
+    const audioIcon = document.getElementById('audioIcon');
+    const audioText = document.getElementById('audioText');
+    const expandVideoBtn = document.getElementById('expandVideoBtn');
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    if (toggleAudioBtn && heroVideo) {
+      toggleAudioBtn.addEventListener('click', () => {
+        heroVideo.muted = !heroVideo.muted;
+        if (heroVideo.muted) {
+          audioIcon.classList.replace('bi-volume-up-fill', 'bi-volume-mute-fill');
+          if (audioText) audioText.textContent = 'Sound Off';
+        } else {
+          audioIcon.classList.replace('bi-volume-mute-fill', 'bi-volume-up-fill');
+          if (audioText) audioText.textContent = 'Sound On';
+        }
+      });
+    }
+
+    if (expandVideoBtn && heroVideo) {
+      expandVideoBtn.addEventListener('click', () => {
+        if (heroVideo.requestFullscreen) {
+          heroVideo.requestFullscreen();
+        } else if (heroVideo.webkitRequestFullscreen) {
+          heroVideo.webkitRequestFullscreen();
+        } else if (heroVideo.msRequestFullscreen) {
+          heroVideo.msRequestFullscreen();
+        }
+      });
+    }
+
+    // Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        if (isHidden) {
+          menuIcon.classList.remove('bi-x-lg');
+          menuIcon.classList.add('bi-list');
+        } else {
+          menuIcon.classList.remove('bi-list');
+          menuIcon.classList.add('bi-x-lg');
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('bi-x-lg');
+          menuIcon.classList.add('bi-list');
+        });
+      });
+    }
+
+    // Modal Lightbox for Inspecting Design Cards
+    document.addEventListener("DOMContentLoaded", function() {
+      const modal = document.getElementById("projectModal");
+      const modalImg = document.getElementById("modalImg");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDesc = document.getElementById("modalDesc");
+      const closeBtn = document.getElementById("closeModal");
+      const cards = document.querySelectorAll(".card.project");
+
+      cards.forEach(card => {
+        card.addEventListener("click", function() {
+          const img = card.querySelector(".card-img-top");
+          const title = card.querySelector("h5") ? card.querySelector("h5").innerText : "";
+          const desc = card.querySelector("p") ? card.querySelector("p").innerText : "";
+
+          if (img && modal) {
+            modalImg.src = img.src;
+            modalTitle.innerText = title;
+            modalDesc.innerText = desc;
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            document.body.style.overflow = "hidden";
+          }
+        });
+      });
+
+      function closeModal() {
+        if (modal) {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+          document.body.style.overflow = "auto";
+        }
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener("click", closeModal);
+      }
+
+      if (modal) {
+        modal.addEventListener("click", function(e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+      }
+
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape" && modal && !modal.classList.contains("hidden")) {
+          closeModal();
+        }
+      });
+    });
+  </script>
 </body>
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000, // animation time (1 second)
-        easing: 'ease-out',
-        once: false, // repeat animation when scrolling back
-      });
-
-    </script>
-    <!-- detail image --><div id="projectModal" style="display: none; position: fixed; z-index: 1050; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); align-items: center; justify-content: center; padding: 20px;">
-  
-  <span id="closeModal" style="position: absolute; top: 20px; right: 20px; font-size: 35px; font-weight: bold; color: #fff; cursor: pointer; z-index: 1060; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.5); border-radius: 50%;">&times;</span>
-  
-  <div style="background: #fff; max-width: 450px; width: 100%; max-height: 100vh; border-radius: 12px; overflow-y: auto; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.5); display: flex; flex-direction: column;">
-    
-    <div style="width: 100%; max-height: 150vh; overflow: hidden; display: flex; align-items: center; background: #f8f9fa;">
-      <img id="modalImg" src="" alt="Project Image" style="width: 100%; height: 100%; object-fit: contain;">
-    </div>
-    
-    <div style="padding: 20px; font-family: sans-serif;">
-      <h4 id="modalTitle" style="margin-top: 0; margin-bottom: 10px; color: #111; font-size: 18px;"></h4>
-      <p id="modalDesc" style="margin: 0; color: #666; font-size: 14px; line-height: 1.5;"></p>
-    </div>
-  </div>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const modal = document.getElementById("projectModal");
-  const modalImg = document.getElementById("modalImg");
-  const modalTitle = document.getElementById("modalTitle");
-  const modalDesc = document.getElementById("modalDesc");
-  const closeBtn = document.getElementById("closeModal");
-
-  // ចាប់យកកាតគម្រោងទាំងអស់
-  const cards = document.querySelectorAll(".card.project");
-
-  cards.forEach(card => {
-    const img = card.querySelector(".card-img-top");
-    
-    if (img) {
-      img.style.cursor = "pointer";
-      img.addEventListener("click", function() {
-        const title = card.querySelector("h5") ? card.querySelector("h5").innerText : "";
-        const desc = card.querySelector("p") ? card.querySelector("p").innerText : "";
-        
-        // បញ្ចូលទិន្នន័យទៅក្នុង Modal
-        modalImg.src = this.src;
-        modalTitle.innerText = title;
-        modalDesc.innerText = desc;
-        
-        // បង្ហាញ Modal
-        modal.style.display = "flex";
-        document.body.style.overflow = "hidden"; // បិទមិនឱ្យអូស Background ខាងក្រោយ
-      });
-    }
-  });
-
-  // មុខងារបិទ Modal
-  function closeModal() {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto"; // បើកឱ្យអូស Background វិញ
-  }
-
-  closeBtn.addEventListener("click", closeModal);
-  
-  // ចុចលើផ្ទៃខ្មៅខាងក្រៅដើម្បីបិទ
-  modal.addEventListener("click", function(e) {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-});
-</script>
-    
 </html>
